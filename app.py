@@ -7,7 +7,7 @@ from datetime import datetime
 
 # ── Page Config ──────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Jonathan L. Wangatia | Researcher Profile",
+    page_title="Elienock Lubaya Mulumba | Researcher Profile",
     page_icon="🔬",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -185,7 +185,6 @@ st.markdown("""
         font-family: 'Inter', sans-serif;
     }
 
-    /* Hide Streamlit branding */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
@@ -197,12 +196,12 @@ with st.sidebar:
     st.markdown("### Navigation")
     page = st.radio(
         "Go to",
-        ["Home", "Research", "Skills & Tools", "Publications & Presentations", "Contact"],
+        ["Home", "Research & Projects", "Skills & Tools", "Achievements & Impact", "Contact"],
         label_visibility="collapsed",
     )
     st.markdown("---")
     st.markdown("##### Quick Links")
-    st.markdown("[GitHub](https://github.com/) · [LinkedIn](https://linkedin.com/) · [Google Scholar](https://scholar.google.com/)")
+    st.markdown("[GitHub](https://github.com/Elienock) · [LinkedIn](https://linkedin.com/)")
     st.markdown("---")
     st.caption(f"Last updated: {datetime.now().strftime('%B %Y')}")
 
@@ -211,100 +210,93 @@ with st.sidebar:
 # HOME
 # ══════════════════════════════════════════════════════════════════════════════
 if page == "Home":
-    # Hero Section
     st.markdown("""
     <div class="hero-section">
-        <div class="hero-name">Jonathan L. Wangatia</div>
-        <div class="hero-title">MSc Industrial Engineering Candidate · ML Researcher · Data Analytics Entrepreneur</div>
+        <div class="hero-name">Elienock Lubaya Mulumba</div>
+        <div class="hero-title">Software Engineer · Research Fellow (CHPC 2026) · ML Practitioner</div>
         <div class="hero-bio">
-            Bridging traditional industrial engineering with modern AI/ML to solve
-            real-world problems across healthcare, logistics, and operations. My research
-            focuses on building intelligent forecasting systems that help organisations
-            make data-driven decisions — with a special emphasis on healthcare demand
-            prediction in resource-constrained African settings.
+            A versatile Software Engineer with over 4 years of industry experience and a newly
+            completed Advanced Diploma in Computer Science. I specialize in bridging the gap between
+            high-level architectural design and low-level computational efficiency. My work focuses
+            on building scalable digital ecosystems and applying Machine Learning to solve real-world
+            logistical and social challenges.
         </div>
         <div style="margin-top:1rem;">
             <span class="contact-badge">📍 Pretoria, South Africa</span>
-            <span class="contact-badge">🎓 University of Pretoria</span>
-            <span class="contact-badge">🏢 CEO, JLWanalytics</span>
+            <span class="contact-badge">🎓 Tshwane University of Technology</span>
+            <span class="contact-badge">🏢 Founder, Albo Tech SARL & Claudine Tech</span>
         </div>
     </div>
     """, unsafe_allow_html=True)
 
-    # Metrics
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        st.markdown('<div class="metric-card"><div class="metric-value">3</div><div class="metric-label">ML Models Built</div></div>', unsafe_allow_html=True)
+        st.markdown('<div class="metric-card"><div class="metric-value">4+</div><div class="metric-label">Years Experience</div></div>', unsafe_allow_html=True)
     with col2:
-        st.markdown('<div class="metric-card"><div class="metric-value">200+</div><div class="metric-label">Students Mentored</div></div>', unsafe_allow_html=True)
+        st.markdown('<div class="metric-card"><div class="metric-value">2</div><div class="metric-label">Tech Companies Founded</div></div>', unsafe_allow_html=True)
     with col3:
-        st.markdown('<div class="metric-card"><div class="metric-value">5+</div><div class="metric-label">Industry Certs</div></div>', unsafe_allow_html=True)
+        st.markdown('<div class="metric-card"><div class="metric-value">5+</div><div class="metric-label">Certifications</div></div>', unsafe_allow_html=True)
     with col4:
-        st.markdown('<div class="metric-card"><div class="metric-value">2</div><div class="metric-label">Countries</div></div>', unsafe_allow_html=True)
+        st.markdown('<div class="metric-card"><div class="metric-value">2</div><div class="metric-label">Countries (SA & DRC)</div></div>', unsafe_allow_html=True)
 
-    # Education Timeline
     st.markdown('<div class="section-header">Education</div>', unsafe_allow_html=True)
 
     st.markdown("""
     <div class="timeline-item">
-        <div class="timeline-year">2024 – Present</div>
-        <div class="timeline-title">MSc Industrial Engineering</div>
-        <div class="timeline-subtitle">University of Pretoria, South Africa</div>
-        <div class="timeline-subtitle" style="margin-top:0.3rem; color:#4a5c6a;">
-            Thesis: <em>HealthForecast AI – Machine Learning for Hospital Patient Arrival Prediction</em>
-        </div>
+        <div class="timeline-year">2026</div>
+        <div class="timeline-title">CHPC Coding Summer School — Research Fellow</div>
+        <div class="timeline-subtitle">University of Pretoria · High-Performance Computing</div>
     </div>
     <div class="timeline-item">
         <div class="timeline-year">Completed</div>
-        <div class="timeline-title">BTech Electromechanical Engineering</div>
-        <div class="timeline-subtitle">University of Lubumbashi, DRC</div>
+        <div class="timeline-title">Advanced Diploma in Computer Science</div>
+        <div class="timeline-subtitle">Tshwane University of Technology (TUT)</div>
+        <div class="timeline-subtitle" style="margin-top:0.3rem; color:#4a5c6a;">
+            Specialization: <em>Full-Stack Systems, Machine Learning & Predictive Modeling</em>
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
-    # Certifications
     st.markdown('<div class="section-header">Certifications</div>', unsafe_allow_html=True)
 
     certs = [
-        "Six Sigma Green Belt", "Azure Machine Learning", "CSCMP Supply Chain Management",
-        "Microsoft Power Platform", "Fire Academy (2024)"
+        "Machine Learning (SETA)", "Cisco Cybersecurity", "CHPC 2026 Research Fellow",
+        "Full-Stack Development", "Data Science & Predictive Modeling"
     ]
     tags_html = " ".join([f'<span class="skill-tag">{c}</span>' for c in certs])
     st.markdown(tags_html, unsafe_allow_html=True)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-# RESEARCH
+# RESEARCH & PROJECTS
 # ══════════════════════════════════════════════════════════════════════════════
-elif page == "Research":
-    st.markdown('<div class="section-header">Flagship Research — HealthForecast AI</div>', unsafe_allow_html=True)
+elif page == "Research & Projects":
+    st.markdown('<div class="section-header">Flagship Project — The Kneel</div>', unsafe_allow_html=True)
 
     st.markdown("""
     <div class="project-card">
-        <div class="project-title">HealthForecast AI: Machine Learning Platform for Predicting Hospital Patient Arrivals</div>
+        <div class="project-title">The Kneel: Sophisticated Digital Ecosystem Platform</div>
         <div class="project-desc">
-            An end-to-end ML forecasting platform designed to help hospitals anticipate patient demand,
-            optimise staff allocation, and reduce wait times. The system compares three complementary
-            modelling approaches — <strong>ARIMA</strong> (statistical baseline), <strong>LSTM</strong>
-            (deep-learning sequence model), and <strong>XGBoost</strong> (gradient-boosted trees) — and
-            incorporates uncertainty quantification through prediction intervals so that decision-makers
-            can plan for best- and worst-case scenarios.
+            Currently architecting <strong>The Kneel</strong>, a sophisticated digital ecosystem
+            designed for specialized community connectivity and service management. The platform
+            implements secure, invite-only authentication protocols, complex database relations,
+            and high-performance backend logic to deliver a seamless, scalable user experience.
         </div>
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("##### Research Architecture")
+    st.markdown("##### System Architecture")
 
-    # Architecture diagram
     fig_arch = go.Figure()
 
     boxes = [
-        {"x": 0.5, "y": 0.9, "text": "Raw Hospital Data", "color": "#0f2027"},
-        {"x": 0.5, "y": 0.72, "text": "Feature Engineering\n& Preprocessing", "color": "#203a43"},
-        {"x": 0.15, "y": 0.5, "text": "ARIMA\n(Statistical)", "color": "#2c5364"},
-        {"x": 0.5, "y": 0.5, "text": "LSTM\n(Deep Learning)", "color": "#2c5364"},
-        {"x": 0.85, "y": 0.5, "text": "XGBoost\n(Ensemble)", "color": "#2c5364"},
-        {"x": 0.5, "y": 0.28, "text": "Ensemble &\nUncertainty Quantification", "color": "#203a43"},
-        {"x": 0.5, "y": 0.1, "text": "Streamlit Dashboard\n& Actionable Insights", "color": "#0f2027"},
+        {"x": 0.5, "y": 0.9, "text": "User Layer\n(Invite-Only Auth)", "color": "#0f2027"},
+        {"x": 0.5, "y": 0.72, "text": "API Gateway\n& Security (SOS Protocols)", "color": "#203a43"},
+        {"x": 0.15, "y": 0.5, "text": "Java Backend\n(Multi-threaded)", "color": "#2c5364"},
+        {"x": 0.5, "y": 0.5, "text": "PHP Services\n(API Integration)", "color": "#2c5364"},
+        {"x": 0.85, "y": 0.5, "text": "ML Pipeline\n(Predictive Models)", "color": "#2c5364"},
+        {"x": 0.5, "y": 0.28, "text": "Complex Database\nRelations & Analytics", "color": "#203a43"},
+        {"x": 0.5, "y": 0.1, "text": "Dashboard &\nBusiness Intelligence", "color": "#0f2027"},
     ]
 
     for b in boxes:
@@ -346,62 +338,49 @@ elif page == "Research":
     )
     st.plotly_chart(fig_arch, use_container_width=True)
 
-    # Demo forecast
-    st.markdown("##### Interactive Forecast Demo")
-    st.caption("Simulated patient-arrival forecast to illustrate the modelling approach.")
+    st.markdown('<div class="section-header">Research — Water Infrastructure Failure Prediction</div>', unsafe_allow_html=True)
+
+    st.markdown("""
+    <div class="project-card">
+        <div class="project-title">Predictive Modeling for Public Infrastructure Failure</div>
+        <div class="project-desc">
+            Developed predictive models for water infrastructure failure, utilizing real-world data sets
+            to calculate <strong>Optimal Response Time (ORT)</strong> vs. <strong>Actual Repair Time (ART)</strong>.
+            Applied regression analysis, data cleaning, and ML techniques to identify failure patterns
+            and optimize maintenance scheduling for public water systems.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("##### Infrastructure Response Analysis (Simulated)")
 
     np.random.seed(42)
-    days = 90
-    t = np.arange(days)
-    trend = 120 + 0.3 * t
-    seasonal = 15 * np.sin(2 * np.pi * t / 7)
-    noise = np.random.normal(0, 8, days)
-    actual = trend + seasonal + noise
+    months = pd.date_range("2024-06-01", periods=12, freq="M").strftime("%b %Y")
+    ort = np.random.uniform(2, 6, 12)
+    art = ort + np.random.uniform(1, 8, 12)
 
-    forecast_start = 70
-    pred_t = np.arange(forecast_start, days)
-    pred_arima = trend[forecast_start:] + seasonal[forecast_start:] + np.random.normal(0, 4, len(pred_t))
-    pred_lstm = trend[forecast_start:] + seasonal[forecast_start:] + np.random.normal(2, 3.5, len(pred_t))
-    pred_xgb = trend[forecast_start:] + seasonal[forecast_start:] + np.random.normal(-1, 3, len(pred_t))
-    ensemble = (pred_arima + pred_lstm + pred_xgb) / 3
-    upper = ensemble + 18
-    lower = ensemble - 18
-
-    dates = pd.date_range("2025-01-01", periods=days, freq="D")
-
-    fig = go.Figure()
-    fig.add_trace(go.Scatter(x=dates, y=actual, name="Actual Arrivals", line=dict(color="#1a2f3a", width=2)))
-    fig.add_trace(go.Scatter(x=dates[forecast_start:], y=pred_arima, name="ARIMA", line=dict(color="#e07a5f", width=1.5, dash="dot")))
-    fig.add_trace(go.Scatter(x=dates[forecast_start:], y=pred_lstm, name="LSTM", line=dict(color="#3d85c6", width=1.5, dash="dot")))
-    fig.add_trace(go.Scatter(x=dates[forecast_start:], y=pred_xgb, name="XGBoost", line=dict(color="#81b29a", width=1.5, dash="dot")))
-    fig.add_trace(go.Scatter(x=dates[forecast_start:], y=ensemble, name="Ensemble", line=dict(color="#f2cc8f", width=2.5)))
-    fig.add_trace(go.Scatter(
-        x=pd.concat([pd.Series(dates[forecast_start:]), pd.Series(dates[forecast_start:][::-1])]),
-        y=np.concatenate([upper, lower[::-1]]),
-        fill="toself", fillcolor="rgba(242,204,143,0.15)",
-        line=dict(width=0), name="95% Prediction Interval", showlegend=True,
+    fig_infra = go.Figure()
+    fig_infra.add_trace(go.Bar(x=months, y=ort, name="Optimal Response Time (hrs)", marker_color="#2c5364"))
+    fig_infra.add_trace(go.Bar(x=months, y=art, name="Actual Repair Time (hrs)", marker_color="#e07a5f"))
+    fig_infra.add_trace(go.Scatter(
+        x=months, y=art - ort, name="Gap (ART - ORT)",
+        line=dict(color="#f2cc8f", width=2.5, dash="dot"), yaxis="y",
     ))
-    fig.add_vline(x=dates[forecast_start], line_dash="dash", line_color="grey", annotation_text="Forecast start")
-    fig.update_layout(
-        height=400, template="plotly_white",
-        yaxis_title="Daily Patient Arrivals",
+    fig_infra.update_layout(
+        barmode="group", height=400, template="plotly_white",
+        yaxis_title="Hours",
         legend=dict(orientation="h", yanchor="bottom", y=-0.25, xanchor="center", x=0.5),
         margin=dict(l=40, r=20, t=20, b=60),
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig_infra, use_container_width=True)
 
-    # Other projects
-    st.markdown('<div class="section-header">Other Projects</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">Ventures & Other Projects</div>', unsafe_allow_html=True)
 
     projects = [
-        ("JLWanalytics — Africa's Premier Data Refinery",
-         "A data analytics startup offering end-to-end data engineering, ML modelling, and BI dashboard services targeting African enterprises."),
-        ("PizzaOps Intelligence",
-         "AI-powered delivery operations analytics for pizza chains — route optimisation, demand forecasting, and real-time KPI monitoring."),
-        ("JusticeForecast SA",
-         "Predictive analytics platform for South African courts to forecast case volumes and optimise judicial resource allocation."),
-        ("TREKA's Services",
-         "Professional translation company bridging French and English communication across business, legal, and technical domains."),
+        ("Albo Tech SARL",
+         "A cross-border digital agency operating in South Africa and the DRC, delivering full-stack web solutions, user engagement tracking, and conversion optimization for international markets."),
+        ("Claudine Tech",
+         "Technology company specializing in digital solutions, managing full-stack deployments and tracking business intelligence metrics across multiple markets."),
     ]
 
     for title, desc in projects:
@@ -420,18 +399,19 @@ elif page == "Skills & Tools":
     st.markdown('<div class="section-header">Technical Skill Proficiency</div>', unsafe_allow_html=True)
 
     skills_data = pd.DataFrame({
-        "Skill": ["Python / ML", "Streamlit", "Pandas / NumPy", "Scikit-learn", "TensorFlow / Keras",
-                   "SQL", "Power BI", "Excel / VBA", "Docker", "Git / GitHub",
-                   "JavaScript / React", "Django / FastAPI"],
-        "Proficiency": [92, 88, 90, 85, 78, 80, 82, 85, 65, 75, 55, 60],
-        "Category": ["ML & Data Science"] * 5 + ["Data & BI"] * 3 + ["DevOps"] * 2 + ["Web Dev"] * 2,
+        "Skill": ["Java", "PHP", "Python", "JavaScript", "SQL",
+                   "Machine Learning", "Data Science", "Cybersecurity",
+                   "API Integration", "Multi-threaded Apps", "Full-Stack Dev", "Cloud/HPC"],
+        "Proficiency": [92, 88, 82, 78, 85,
+                        80, 78, 82,
+                        86, 88, 90, 70],
+        "Category": ["Backend"] * 2 + ["Data & ML"] * 3 + ["Data & ML"] * 3 + ["Architecture"] * 4,
     })
 
     cat_colors = {
-        "ML & Data Science": "#2c5364",
-        "Data & BI": "#3d85c6",
-        "DevOps": "#81b29a",
-        "Web Dev": "#e07a5f",
+        "Backend": "#2c5364",
+        "Data & ML": "#3d85c6",
+        "Architecture": "#81b29a",
     }
     skills_data["Color"] = skills_data["Category"].map(cat_colors)
 
@@ -446,31 +426,31 @@ elif page == "Skills & Tools":
             textposition="outside",
         ))
     fig_skills.update_layout(
-        barmode="group", height=500, template="plotly_white",
+        barmode="group", height=520, template="plotly_white",
         xaxis=dict(range=[0, 105], title="Proficiency (%)"),
         legend=dict(orientation="h", yanchor="bottom", y=-0.15, xanchor="center", x=0.5),
-        margin=dict(l=120, r=40, t=20, b=60),
+        margin=dict(l=140, r=40, t=20, b=60),
     )
     st.plotly_chart(fig_skills, use_container_width=True)
 
-    # Toolbox Tag Cloud
     st.markdown('<div class="section-header">Toolbox</div>', unsafe_allow_html=True)
 
     tools = [
-        "Python", "Streamlit", "Pandas", "NumPy", "Scikit-learn", "TensorFlow", "Keras",
-        "XGBoost", "ARIMA", "LSTM", "Plotly", "Matplotlib", "SQL", "PostgreSQL",
-        "Power BI", "Excel", "VBA", "Docker", "Git", "GitHub", "VS Code",
-        "Azure ML", "Jupyter", "FastAPI", "Django", "React", "Next.js",
-        "Six Sigma", "Supply Chain Mgmt", "SCADA", "PLC Programming",
+        "Java", "PHP", "Python", "JavaScript", "SQL", "HTML/CSS",
+        "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Plotly",
+        "Spring Boot", "Laravel", "Node.js", "React",
+        "MySQL", "PostgreSQL", "MongoDB",
+        "Git", "GitHub", "Docker", "Linux",
+        "Cisco Security", "SOS Protocols", "API Design",
+        "Claude CLI", "HPC", "Streamlit",
     ]
     st.markdown(" ".join([f'<span class="skill-tag">{t}</span>' for t in tools]), unsafe_allow_html=True)
 
-    # Radar chart – competency areas
     st.markdown('<div class="section-header">Competency Radar</div>', unsafe_allow_html=True)
 
-    categories = ["Machine Learning", "Data Engineering", "Web Development",
-                   "Statistical Analysis", "Industrial Engineering", "Project Management"]
-    values = [90, 80, 60, 85, 82, 78]
+    categories = ["Backend Engineering", "Machine Learning", "Cybersecurity",
+                   "Full-Stack Development", "Data Science", "System Architecture"]
+    values = [92, 80, 82, 90, 78, 85]
     values_closed = values + [values[0]]
     categories_closed = categories + [categories[0]]
 
@@ -489,55 +469,96 @@ elif page == "Skills & Tools":
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-# PUBLICATIONS & PRESENTATIONS
+# ACHIEVEMENTS & IMPACT
 # ══════════════════════════════════════════════════════════════════════════════
-elif page == "Publications & Presentations":
-    st.markdown('<div class="section-header">Research Output</div>', unsafe_allow_html=True)
+elif page == "Achievements & Impact":
+    st.markdown('<div class="section-header">Key Accomplishments</div>', unsafe_allow_html=True)
 
-    st.markdown("""
-    <div class="project-card">
-        <div class="project-title">📝 MSc Thesis (In Progress)</div>
-        <div class="project-desc">
-            <strong>HealthForecast AI: A Comparative Machine Learning Framework for Hospital
-            Patient Arrival Prediction</strong><br>
-            University of Pretoria · Department of Industrial & Systems Engineering<br><br>
-            Investigating how ARIMA, LSTM, and XGBoost models can be combined with
-            uncertainty quantification to produce reliable, actionable demand forecasts
-            for hospitals in resource-constrained settings.
+    accomplishments = [
+        ("🎓 Advanced Diploma in Computer Science",
+         "Completed at Tshwane University of Technology, specializing in full-stack systems, machine learning, and predictive modeling."),
+        ("🔬 CHPC 2026 Research Fellow",
+         "Selected for the Coding Summer School at the University of Pretoria to master High-Performance Computing."),
+        ("🏢 Founder — Albo Tech SARL & Claudine Tech",
+         "Demonstrated ability to take research-level concepts and commercialize them into functional, cross-border digital agencies operating in South Africa and the DRC."),
+        ("🔒 Cisco Certified in Cybersecurity",
+         "Expert in implementing SOS protocols and secure user-data handling across enterprise systems."),
+    ]
+
+    for title, desc in accomplishments:
+        st.markdown(f"""
+        <div class="project-card">
+            <div class="project-title">{title}</div>
+            <div class="project-desc">{desc}</div>
         </div>
-    </div>
-    """, unsafe_allow_html=True)
+        """, unsafe_allow_html=True)
 
-    st.markdown('<div class="section-header">Conference & Presentations</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">Research & Quantitative Impact</div>', unsafe_allow_html=True)
 
-    st.info("Conference submissions planned for 2026 upon thesis completion. Areas of interest include SAIIE (Southern African Institute for Industrial Engineering) and related ML-in-healthcare venues.")
+    st.markdown("##### System Optimization — Script Performance Improvement")
 
-    st.markdown('<div class="section-header">Teaching & Mentorship</div>', unsafe_allow_html=True)
+    np.random.seed(10)
+    iterations = list(range(1, 11))
+    before_opt = [45, 42, 48, 44, 46, 43, 47, 45, 44, 46]
+    after_opt = [45, 38, 32, 28, 24, 21, 19, 17, 16, 15]
 
-    st.markdown("""
-    <div class="project-card">
-        <div class="project-title">🎓 Teaching Assistant — University of Pretoria</div>
-        <div class="project-desc">
-            Supporting 200+ undergraduate and postgraduate students in industrial engineering
-            courses. Responsibilities include tutoring in operations research, statistics,
-            and data analytics modules; grading assignments; and providing one-on-one
-            academic mentorship.
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+    fig_perf = go.Figure()
+    fig_perf.add_trace(go.Scatter(
+        x=iterations, y=before_opt, name="Before Optimization",
+        line=dict(color="#e07a5f", width=2.5), mode="lines+markers",
+    ))
+    fig_perf.add_trace(go.Scatter(
+        x=iterations, y=after_opt, name="After Optimization",
+        line=dict(color="#2c5364", width=2.5), mode="lines+markers",
+        fill="tonexty", fillcolor="rgba(44,83,100,0.1)",
+    ))
+    fig_perf.update_layout(
+        height=380, template="plotly_white",
+        xaxis_title="Optimization Iteration",
+        yaxis_title="Execution Latency (seconds)",
+        legend=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5),
+        margin=dict(l=40, r=20, t=20, b=60),
+    )
+    st.plotly_chart(fig_perf, use_container_width=True)
 
-    # Research interests word cloud via bar chart
+    st.markdown("##### Cross-Border Business Intelligence Metrics (Simulated)")
+
+    quarters = ["Q1 2024", "Q2 2024", "Q3 2024", "Q4 2024", "Q1 2025", "Q2 2025"]
+    sa_engagement = [320, 480, 620, 780, 950, 1150]
+    drc_engagement = [150, 220, 340, 410, 530, 680]
+    sa_conversion = [3.2, 3.8, 4.1, 4.5, 5.0, 5.4]
+    drc_conversion = [2.1, 2.5, 3.0, 3.3, 3.8, 4.2]
+
+    fig_biz = go.Figure()
+    fig_biz.add_trace(go.Bar(x=quarters, y=sa_engagement, name="SA — User Engagement", marker_color="#2c5364"))
+    fig_biz.add_trace(go.Bar(x=quarters, y=drc_engagement, name="DRC — User Engagement", marker_color="#81b29a"))
+    fig_biz.add_trace(go.Scatter(
+        x=quarters, y=[c * 100 for c in sa_conversion], name="SA — Conversion Rate (x100)",
+        line=dict(color="#f2cc8f", width=2.5), yaxis="y",
+    ))
+    fig_biz.add_trace(go.Scatter(
+        x=quarters, y=[c * 100 for c in drc_conversion], name="DRC — Conversion Rate (x100)",
+        line=dict(color="#e07a5f", width=2.5, dash="dot"), yaxis="y",
+    ))
+    fig_biz.update_layout(
+        barmode="group", height=420, template="plotly_white",
+        yaxis_title="Users / Rate (x100)",
+        legend=dict(orientation="h", yanchor="bottom", y=-0.25, xanchor="center", x=0.5),
+        margin=dict(l=40, r=20, t=20, b=60),
+    )
+    st.plotly_chart(fig_biz, use_container_width=True)
+
     st.markdown('<div class="section-header">Research Interests</div>', unsafe_allow_html=True)
 
     interests = {
-        "Time-Series Forecasting": 95,
-        "Healthcare Analytics": 90,
-        "MLOps & Deployment": 82,
-        "Uncertainty Quantification": 88,
-        "Operations Research": 80,
-        "Supply Chain Optimisation": 75,
-        "Deep Learning (LSTM/RNN)": 85,
-        "Ensemble Methods": 83,
+        "High-Performance Computing": 92,
+        "Predictive Modeling": 88,
+        "Scalable Systems Architecture": 90,
+        "Machine Learning": 85,
+        "Infrastructure Analytics": 82,
+        "Cybersecurity": 80,
+        "Data Engineering": 78,
+        "Cross-Border Tech Solutions": 75,
     }
     fig_int = go.Figure(go.Bar(
         x=list(interests.values()),
@@ -551,7 +572,7 @@ elif page == "Publications & Presentations":
     fig_int.update_layout(
         height=350, template="plotly_white",
         xaxis=dict(title="Interest Level", range=[0, 100]),
-        margin=dict(l=180, r=20, t=10, b=40),
+        margin=dict(l=200, r=20, t=10, b=40),
     )
     st.plotly_chart(fig_int, use_container_width=True)
 
@@ -566,14 +587,17 @@ elif page == "Contact":
     with col1:
         st.markdown("""
         <div class="project-card">
-            <div class="project-title">📧 Email</div>
-            <div class="project-desc">jonathan@jlwanalytics.com</div>
+            <div class="project-title">🎓 Affiliation</div>
+            <div class="project-desc">
+                Tshwane University of Technology<br>
+                CHPC 2026 Research Fellow — University of Pretoria
+            </div>
         </div>
         <div class="project-card">
-            <div class="project-title">🏢 Affiliation</div>
+            <div class="project-title">💼 Ventures</div>
             <div class="project-desc">
-                University of Pretoria<br>
-                Dept. of Industrial & Systems Engineering
+                Albo Tech SARL · Claudine Tech<br>
+                <em>Cross-border digital agencies (SA & DRC)</em>
             </div>
         </div>
         """, unsafe_allow_html=True)
@@ -581,10 +605,10 @@ elif page == "Contact":
     with col2:
         st.markdown("""
         <div class="project-card">
-            <div class="project-title">💼 Venture</div>
+            <div class="project-title">🔗 Profiles</div>
             <div class="project-desc">
-                JLWanalytics<br>
-                <em>Africa's Premier Data Refinery</em>
+                <a href="https://github.com/Elienock" target="_blank">GitHub — Elienock</a><br>
+                <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
             </div>
         </div>
         <div class="project-card">
@@ -609,7 +633,7 @@ elif page == "Contact":
 st.markdown("---")
 st.markdown(
     "<div style='text-align:center; color:#6b7c8a; font-size:0.8rem; font-family:Inter,sans-serif;'>"
-    "Built with Streamlit · © 2026 Jonathan L. Wangatia · JLWanalytics"
+    "Built with Streamlit · © 2026 Elienock Lubaya Mulumba · Albo Tech SARL & Claudine Tech"
     "</div>",
     unsafe_allow_html=True,
 )
