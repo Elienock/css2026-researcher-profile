@@ -8,7 +8,7 @@ from datetime import datetime
 # ── Page Config ──────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="Elienock Lubaya Mulumba | Researcher Profile",
-    page_icon="🔬",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -222,9 +222,9 @@ if page == "Home":
             logistical and social challenges.
         </div>
         <div style="margin-top:1rem;">
-            <span class="contact-badge">📍 Pretoria, South Africa</span>
-            <span class="contact-badge">🎓 Tshwane University of Technology</span>
-            <span class="contact-badge">🏢 Founder, Albo Tech SARL & Claudine Tech</span>
+            <span class="contact-badge">Pretoria, South Africa</span>
+            <span class="contact-badge">Tshwane University of Technology</span>
+            <span class="contact-badge">Founder, Claudine Tech | Working at Albo</span>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -233,7 +233,7 @@ if page == "Home":
     with col1:
         st.markdown('<div class="metric-card"><div class="metric-value">4+</div><div class="metric-label">Years Experience</div></div>', unsafe_allow_html=True)
     with col2:
-        st.markdown('<div class="metric-card"><div class="metric-value">2</div><div class="metric-label">Tech Companies Founded</div></div>', unsafe_allow_html=True)
+        st.markdown('<div class="metric-card"><div class="metric-value">1</div><div class="metric-label">Tech Company Founded</div></div>', unsafe_allow_html=True)
     with col3:
         st.markdown('<div class="metric-card"><div class="metric-value">5+</div><div class="metric-label">Certifications</div></div>', unsafe_allow_html=True)
     with col4:
@@ -377,10 +377,10 @@ elif page == "Research & Projects":
     st.markdown('<div class="section-header">Ventures & Other Projects</div>', unsafe_allow_html=True)
 
     projects = [
-        ("Albo Tech SARL",
-         "A cross-border digital agency operating in South Africa and the DRC, delivering full-stack web solutions, user engagement tracking, and conversion optimization for international markets."),
-        ("Claudine Tech",
+        ("Claudine Tech (Founded)",
          "Technology company specializing in digital solutions, managing full-stack deployments and tracking business intelligence metrics across multiple markets."),
+        ("Albo (Current Workplace)",
+         "Working as part of the team delivering full-stack web solutions, user engagement tracking, and conversion optimization."),
     ]
 
     for title, desc in projects:
@@ -475,13 +475,13 @@ elif page == "Achievements & Impact":
     st.markdown('<div class="section-header">Key Accomplishments</div>', unsafe_allow_html=True)
 
     accomplishments = [
-        ("🎓 Advanced Diploma in Computer Science",
+        ("Advanced Diploma in Computer Science",
          "Completed at Tshwane University of Technology, specializing in full-stack systems, machine learning, and predictive modeling."),
-        ("🔬 CHPC 2026 Research Fellow",
+        ("CHPC 2026 Research Fellow",
          "Selected for the Coding Summer School at the University of Pretoria to master High-Performance Computing."),
-        ("🏢 Founder — Albo Tech SARL & Claudine Tech",
-         "Demonstrated ability to take research-level concepts and commercialize them into functional, cross-border digital agencies operating in South Africa and the DRC."),
-        ("🔒 Cisco Certified in Cybersecurity",
+        ("Founder — Claudine Tech | Working at Albo",
+         "Founded Claudine Tech, a technology company specializing in digital solutions. Currently working at Albo, contributing to full-stack web solutions and business intelligence."),
+        ("Cisco Certified in Cybersecurity",
          "Expert in implementing SOS protocols and secure user-data handling across enterprise systems."),
     ]
 
@@ -587,17 +587,17 @@ elif page == "Contact":
     with col1:
         st.markdown("""
         <div class="project-card">
-            <div class="project-title">🎓 Affiliation</div>
+            <div class="project-title">Affiliation</div>
             <div class="project-desc">
                 Tshwane University of Technology<br>
                 CHPC 2026 Research Fellow — University of Pretoria
             </div>
         </div>
         <div class="project-card">
-            <div class="project-title">💼 Ventures</div>
+            <div class="project-title">Ventures & Work</div>
             <div class="project-desc">
-                Albo Tech SARL · Claudine Tech<br>
-                <em>Cross-border digital agencies (SA & DRC)</em>
+                Claudine Tech (Founded) · Albo (Working at)<br>
+                <em>Digital solutions & web development</em>
             </div>
         </div>
         """, unsafe_allow_html=True)
@@ -605,14 +605,14 @@ elif page == "Contact":
     with col2:
         st.markdown("""
         <div class="project-card">
-            <div class="project-title">🔗 Profiles</div>
+            <div class="project-title">Profiles</div>
             <div class="project-desc">
                 <a href="https://github.com/Elienock" target="_blank">GitHub — Elienock</a><br>
                 <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
             </div>
         </div>
         <div class="project-card">
-            <div class="project-title">📍 Location</div>
+            <div class="project-title">Location</div>
             <div class="project-desc">Pretoria, Gauteng, South Africa</div>
         </div>
         """, unsafe_allow_html=True)
@@ -633,7 +633,7 @@ elif page == "Contact":
 st.markdown("---")
 st.markdown(
     "<div style='text-align:center; color:#6b7c8a; font-size:0.8rem; font-family:Inter,sans-serif;'>"
-    "Built with Streamlit · © 2026 Elienock Lubaya Mulumba · Albo Tech SARL & Claudine Tech"
+    "Built with Streamlit · © 2026 Elienock Lubaya Mulumba · Claudine Tech"
     "</div>",
     unsafe_allow_html=True,
 )
